@@ -13,6 +13,8 @@ public class OnlyMain {
         //虚拟机管理线程的接口
         ThreadMXBean threadMXBean = ManagementFactory.getThreadMXBean();
         ThreadInfo[] threadInfos = threadMXBean.dumpAllThreads(false, false);
-        Arrays.asList(threadInfos).stream().forEach(x -> System.out.println("["+x.getThreadId()+"] :"+x.getThreadName()));
+        Arrays.asList(threadInfos).stream().forEach(x ->
+                    System.out.println("["+x.getThreadId()+"] :"+x.getThreadName()));
+
     }
 }
