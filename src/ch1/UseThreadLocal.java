@@ -6,12 +6,14 @@ package ch1;
  */
 public class UseThreadLocal {
 
-    static ThreadLocal<Integer> threadLocal = new ThreadLocal<Integer>(){
-        @Override
-        protected Integer initialValue() {
-            return 1;
-        }
-    };
+//    static ThreadLocal<Integer> threadLocal = new ThreadLocal<Integer>(){
+//        @Override
+//        protected Integer initialValue() {
+//            return 1;
+//        }
+//    };
+
+    static ThreadLocal<Integer> threadLocal = ThreadLocal.withInitial(() -> 1);
 
     /**
      *  运行三个线程

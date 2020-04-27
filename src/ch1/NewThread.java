@@ -22,7 +22,7 @@ public class NewThread extends Thread{
         }
     }
 
-    //实现Runnable接口
+    //实现Runnable接口,不允许有返回值
     public static class UserRun implements Runnable{
 
         @Override
@@ -31,7 +31,7 @@ public class NewThread extends Thread{
         }
     }
 
-    //实现Callable接口,允许有返回值
+    //实现Callable接口,允许有返回值,可以抛异常
     public static class UserCall implements Callable<String> {
 
         @Override
